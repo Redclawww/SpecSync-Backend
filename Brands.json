@@ -1,0 +1,612 @@
+[
+  {
+    "id": "acer-phones-59",
+    "name": "Acer",
+    "devices": 100
+  },
+  {
+    "id": "alcatel-phones-5",
+    "name": "alcatel",
+    "devices": 409
+  },
+  {
+    "id": "allview-phones-88",
+    "name": "Allview",
+    "devices": 157
+  },
+  {
+    "id": "amazon-phones-76",
+    "name": "Amazon",
+    "devices": 25
+  },
+  {
+    "id": "amoi-phones-28",
+    "name": "Amoi",
+    "devices": 47
+  },
+  {
+    "id": "apple-phones-48",
+    "name": "Apple",
+    "devices": 118
+  },
+  {
+    "id": "archos-phones-90",
+    "name": "Archos",
+    "devices": 43
+  },
+  {
+    "id": "asus-phones-46",
+    "name": "Asus",
+    "devices": 202
+  },
+  {
+    "id": "at&t-phones-57",
+    "name": "AT&T",
+    "devices": 4
+  },
+  {
+    "id": "benefon-phones-15",
+    "name": "Benefon",
+    "devices": 9
+  },
+  {
+    "id": "benq-phones-31",
+    "name": "BenQ",
+    "devices": 35
+  },
+  {
+    "id": "benq_siemens-phones-42",
+    "name": "BenQ-Siemens",
+    "devices": 28
+  },
+  {
+    "id": "bird-phones-34",
+    "name": "Bird",
+    "devices": 61
+  },
+  {
+    "id": "blackberry-phones-36",
+    "name": "BlackBerry",
+    "devices": 92
+  },
+  {
+    "id": "blackview-phones-116",
+    "name": "Blackview",
+    "devices": 89
+  },
+  {
+    "id": "blu-phones-67",
+    "name": "BLU",
+    "devices": 369
+  },
+  {
+    "id": "bosch-phones-10",
+    "name": "Bosch",
+    "devices": 10
+  },
+  {
+    "id": "bq-phones-108",
+    "name": "BQ",
+    "devices": 20
+  },
+  {
+    "id": "casio-phones-77",
+    "name": "Casio",
+    "devices": 5
+  },
+  {
+    "id": "cat-phones-89",
+    "name": "Cat",
+    "devices": 22
+  },
+  {
+    "id": "celkon-phones-75",
+    "name": "Celkon",
+    "devices": 229
+  },
+  {
+    "id": "chea-phones-24",
+    "name": "Chea",
+    "devices": 12
+  },
+  {
+    "id": "coolpad-phones-105",
+    "name": "Coolpad",
+    "devices": 46
+  },
+  {
+    "id": "cubot-phones-130",
+    "name": "Cubot",
+    "devices": 57
+  },
+  {
+    "id": "dell-phones-61",
+    "name": "Dell",
+    "devices": 20
+  },
+  {
+    "id": "doogee-phones-129",
+    "name": "Doogee",
+    "devices": 66
+  },
+  {
+    "id": "emporia-phones-93",
+    "name": "Emporia",
+    "devices": 15
+  },
+  {
+    "id": "energizer-phones-106",
+    "name": "Energizer",
+    "devices": 68
+  },
+  {
+    "id": "ericsson-phones-2",
+    "name": "Ericsson",
+    "devices": 40
+  },
+  {
+    "id": "eten-phones-40",
+    "name": "Eten",
+    "devices": 22
+  },
+  {
+    "id": "fairphone-phones-127",
+    "name": "Fairphone",
+    "devices": 4
+  },
+  {
+    "id": "fujitsu_siemens-phones-50",
+    "name": "Fujitsu Siemens",
+    "devices": 2
+  },
+  {
+    "id": "garmin_asus-phones-65",
+    "name": "Garmin-Asus",
+    "devices": 5
+  },
+  {
+    "id": "gigabyte-phones-47",
+    "name": "Gigabyte",
+    "devices": 63
+  },
+  {
+    "id": "gionee-phones-92",
+    "name": "Gionee",
+    "devices": 95
+  },
+  {
+    "id": "google-phones-107",
+    "name": "Google",
+    "devices": 27
+  },
+  {
+    "id": "haier-phones-33",
+    "name": "Haier",
+    "devices": 59
+  },
+  {
+    "id": "honor-phones-121",
+    "name": "Honor",
+    "devices": 206
+  },
+  {
+    "id": "hp-phones-41",
+    "name": "HP",
+    "devices": 41
+  },
+  {
+    "id": "htc-phones-45",
+    "name": "HTC",
+    "devices": 287
+  },
+  {
+    "id": "huawei-phones-58",
+    "name": "Huawei",
+    "devices": 441
+  },
+  {
+    "id": "i_mate-phones-35",
+    "name": "i-mate",
+    "devices": 34
+  },
+  {
+    "id": "i_mobile-phones-52",
+    "name": "i-mobile",
+    "devices": 37
+  },
+  {
+    "id": "icemobile-phones-69",
+    "name": "Icemobile",
+    "devices": 61
+  },
+  {
+    "id": "infinix-phones-119",
+    "name": "Infinix",
+    "devices": 123
+  },
+  {
+    "id": "innostream-phones-29",
+    "name": "Innostream",
+    "devices": 18
+  },
+  {
+    "id": "inq-phones-60",
+    "name": "iNQ",
+    "devices": 5
+  },
+  {
+    "id": "intex-phones-102",
+    "name": "Intex",
+    "devices": 15
+  },
+  {
+    "id": "itel-phones-131",
+    "name": "itel",
+    "devices": 32
+  },
+  {
+    "id": "jolla-phones-84",
+    "name": "Jolla",
+    "devices": 3
+  },
+  {
+    "id": "karbonn-phones-83",
+    "name": "Karbonn",
+    "devices": 60
+  },
+  {
+    "id": "kyocera-phones-17",
+    "name": "Kyocera",
+    "devices": 24
+  },
+  {
+    "id": "lava-phones-94",
+    "name": "Lava",
+    "devices": 144
+  },
+  {
+    "id": "leeco-phones-109",
+    "name": "LeEco",
+    "devices": 9
+  },
+  {
+    "id": "lenovo-phones-73",
+    "name": "Lenovo",
+    "devices": 246
+  },
+  {
+    "id": "lg-phones-20",
+    "name": "LG",
+    "devices": 667
+  },
+  {
+    "id": "maxon-phones-14",
+    "name": "Maxon",
+    "devices": 31
+  },
+  {
+    "id": "maxwest-phones-87",
+    "name": "Maxwest",
+    "devices": 41
+  },
+  {
+    "id": "meizu-phones-74",
+    "name": "Meizu",
+    "devices": 73
+  },
+  {
+    "id": "micromax-phones-66",
+    "name": "Micromax",
+    "devices": 289
+  },
+  {
+    "id": "microsoft-phones-64",
+    "name": "Microsoft",
+    "devices": 32
+  },
+  {
+    "id": "mitac-phones-25",
+    "name": "Mitac",
+    "devices": 12
+  },
+  {
+    "id": "mitsubishi-phones-8",
+    "name": "Mitsubishi",
+    "devices": 25
+  },
+  {
+    "id": "modu-phones-63",
+    "name": "Modu",
+    "devices": 8
+  },
+  {
+    "id": "motorola-phones-4",
+    "name": "Motorola",
+    "devices": 608
+  },
+  {
+    "id": "mwg-phones-56",
+    "name": "MWg",
+    "devices": 5
+  },
+  {
+    "id": "nec-phones-12",
+    "name": "NEC",
+    "devices": 73
+  },
+  {
+    "id": "neonode-phones-22",
+    "name": "Neonode",
+    "devices": 3
+  },
+  {
+    "id": "niu-phones-79",
+    "name": "NIU",
+    "devices": 30
+  },
+  {
+    "id": "nokia-phones-1",
+    "name": "Nokia",
+    "devices": 576
+  },
+  {
+    "id": "nothing-phones-128",
+    "name": "Nothing",
+    "devices": 3
+  },
+  {
+    "id": "nvidia-phones-97",
+    "name": "Nvidia",
+    "devices": 3
+  },
+  {
+    "id": "o2-phones-30",
+    "name": "O",
+    "devices": 45
+  },
+  {
+    "id": "oneplus-phones-95",
+    "name": "OnePlus",
+    "devices": 65
+  },
+  {
+    "id": "oppo-phones-82",
+    "name": "Oppo",
+    "devices": 295
+  },
+  {
+    "id": "orange-phones-71",
+    "name": "Orange",
+    "devices": 19
+  },
+  {
+    "id": "oukitel-phones-132",
+    "name": "Oukitel",
+    "devices": 32
+  },
+  {
+    "id": "palm-phones-27",
+    "name": "Palm",
+    "devices": 17
+  },
+  {
+    "id": "panasonic-phones-6",
+    "name": "Panasonic",
+    "devices": 123
+  },
+  {
+    "id": "pantech-phones-32",
+    "name": "Pantech",
+    "devices": 72
+  },
+  {
+    "id": "parla-phones-81",
+    "name": "Parla",
+    "devices": 10
+  },
+  {
+    "id": "philips-phones-11",
+    "name": "Philips",
+    "devices": 229
+  },
+  {
+    "id": "plum-phones-72",
+    "name": "Plum",
+    "devices": 113
+  },
+  {
+    "id": "posh-phones-101",
+    "name": "Posh",
+    "devices": 30
+  },
+  {
+    "id": "prestigio-phones-86",
+    "name": "Prestigio",
+    "devices": 56
+  },
+  {
+    "id": "qmobile-phones-103",
+    "name": "QMobile",
+    "devices": 90
+  },
+  {
+    "id": "qtek-phones-38",
+    "name": "Qtek",
+    "devices": 21
+  },
+  {
+    "id": "razer-phones-117",
+    "name": "Razer",
+    "devices": 2
+  },
+  {
+    "id": "realme-phones-118",
+    "name": "Realme",
+    "devices": 183
+  },
+  {
+    "id": "sagem-phones-13",
+    "name": "Sagem",
+    "devices": 120
+  },
+  {
+    "id": "samsung-phones-9",
+    "name": "Samsung",
+    "devices": 1382
+  },
+  {
+    "id": "sendo-phones-18",
+    "name": "Sendo",
+    "devices": 19
+  },
+  {
+    "id": "sewon-phones-26",
+    "name": "Sewon",
+    "devices": 25
+  },
+  {
+    "id": "sharp-phones-23",
+    "name": "Sharp",
+    "devices": 72
+  },
+  {
+    "id": "siemens-phones-3",
+    "name": "Siemens",
+    "devices": 94
+  },
+  {
+    "id": "sonim-phones-54",
+    "name": "Sonim",
+    "devices": 18
+  },
+  {
+    "id": "sony-phones-7",
+    "name": "Sony",
+    "devices": 158
+  },
+  {
+    "id": "sony_ericsson-phones-19",
+    "name": "Sony Ericsson",
+    "devices": 188
+  },
+  {
+    "id": "spice-phones-68",
+    "name": "Spice",
+    "devices": 120
+  },
+  {
+    "id": "t_mobile-phones-55",
+    "name": "T-Mobile",
+    "devices": 64
+  },
+  {
+    "id": "tcl-phones-123",
+    "name": "TCL",
+    "devices": 61
+  },
+  {
+    "id": "tecno-phones-120",
+    "name": "Tecno",
+    "devices": 132
+  },
+  {
+    "id": "tel_me_-phones-21",
+    "name": "Tel.Me.",
+    "devices": 7
+  },
+  {
+    "id": "telit-phones-16",
+    "name": "Telit",
+    "devices": 30
+  },
+  {
+    "id": "thuraya-phones-49",
+    "name": "Thuraya",
+    "devices": 1
+  },
+  {
+    "id": "toshiba-phones-44",
+    "name": "Toshiba",
+    "devices": 35
+  },
+  {
+    "id": "ulefone-phones-124",
+    "name": "Ulefone",
+    "devices": 85
+  },
+  {
+    "id": "unnecto-phones-91",
+    "name": "Unnecto",
+    "devices": 30
+  },
+  {
+    "id": "vertu-phones-39",
+    "name": "Vertu",
+    "devices": 17
+  },
+  {
+    "id": "verykool-phones-70",
+    "name": "verykool",
+    "devices": 139
+  },
+  {
+    "id": "vivo-phones-98",
+    "name": "vivo",
+    "devices": 411
+  },
+  {
+    "id": "vk_mobile-phones-37",
+    "name": "VK Mobile",
+    "devices": 31
+  },
+  {
+    "id": "vodafone-phones-53",
+    "name": "Vodafone",
+    "devices": 87
+  },
+  {
+    "id": "wiko-phones-96",
+    "name": "Wiko",
+    "devices": 99
+  },
+  {
+    "id": "wnd-phones-51",
+    "name": "WND",
+    "devices": 5
+  },
+  {
+    "id": "xcute-phones-43",
+    "name": "XCute",
+    "devices": 4
+  },
+  {
+    "id": "xiaomi-phones-80",
+    "name": "Xiaomi",
+    "devices": 376
+  },
+  {
+    "id": "xolo-phones-85",
+    "name": "XOLO",
+    "devices": 81
+  },
+  {
+    "id": "yezz-phones-78",
+    "name": "Yezz",
+    "devices": 113
+  },
+  {
+    "id": "yota-phones-99",
+    "name": "Yota",
+    "devices": 3
+  },
+  {
+    "id": "yu-phones-100",
+    "name": "YU",
+    "devices": 13
+  },
+  {
+    "id": "zte-phones-62",
+    "name": "ZTE",
+    "devices": 369
+  }
+]
