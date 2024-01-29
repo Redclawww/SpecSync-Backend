@@ -11,7 +11,6 @@ const Brands = mongoose.model('Brands', BrandList);
  
 app.get('/brandlist', async (req, res) => {
     const brands = await gsmarena.catalog.getBrands(); 
-    // const brands = await Brands.find({});
     res.json(brands);
 });
 
