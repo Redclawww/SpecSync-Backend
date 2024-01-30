@@ -2,7 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
-const port = 3001;
+const port = process.env.PORT || 3001 ;
 const cors = require("cors");
 const gsmarena = require("gsmarena-api");
 app.use(express.json());
