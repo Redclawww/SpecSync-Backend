@@ -56,7 +56,7 @@ app.post("/compare", async (req, res) => {
   const { userInput, device1, device2 } = req.body;
   const model = genAI.getGenerativeModel({ model: "gemini-pro" });
 
-  const prompt = `Compare the two smart phones devices device1:${device1.name} device2:${device2.name} and user preference: ${userInput} and provide the whole response in appropriate html tags`;
+  const prompt = `Compare the two smart phones devices device1:${device1.name} device2:${device2.name} and user preference: ${userInput} and provide the whole response in appropriate html tags wrapped in a div`;
 
   const result = await model.generateContent(prompt);
   const response = await result.response;
