@@ -31,6 +31,7 @@ const userSchema = new mongoose.Schema({
 
 const comparisonSchema = new mongoose.Schema({
   userId: { type: String, ref: "User" },
+  email: String,
   device1: String, // Name of device 1
   device2: String, // Name of device 2
   userInput: String, // Specific specifications used for comparison
@@ -70,13 +71,23 @@ app.post("/auth", async (req, res) => {
   }
 });
 
+app.get("/data/:email", async (req, res) => {
+  try {
+    const email = req.params.email;
+    const data = await ComparisonHistory.find({ email });
+    res.json(data);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+});
+
 app.post("/save", async (req, res) => {
   try {
-    const { userId, device1, device2, userInput, finalVerdict } = req.body;
+    const { email, device1, device2, userInput, finalVerdict } = req.body;
 
     // Create a new comparison history object
     const comparison = new ComparisonHistory({
-      userId,
+      email,
       device1,
       device2,
       userInput,
