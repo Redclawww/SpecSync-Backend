@@ -14,7 +14,7 @@ app.use(cors());
 
 // Gemini Configs
 const { GoogleGenerativeAI } = require("@google/generative-ai");
-const genAI = new GoogleGenerativeAI(`${process.env.APIKey}`);
+const genAI = new GoogleGenerativeAI(`${process.env.AIKey}`);
 
 const BrandList = new mongoose.Schema({
   id: String,
@@ -115,7 +115,7 @@ app.post("/getdevicelist", async (req, res) => {
     const device = await gsmarena.catalog.getBrand(getBrand);
     res.json(device);
   } catch (error) {
-    console.log("gsmserror");
+    console.log("gsmserror:",error);
     res.json(error);
   }
 });
@@ -132,18 +132,18 @@ app.post("/devicedetails", async (req, res) => {
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
-  mongoose
-    .connect(`mongodb://0.0.0.0:27017/Spec-Sync`, { useNewUrlParser: true })
-    .then(() => {
-      console.log("Database connected");
-    });
+  // mongoose
+  //   .connect(`mongodb://0.0.0.0:27017/Spec-Sync`, { useNewUrlParser: true })
+  //   .then(() => {
+  //     console.log("Database connected");
+  //   });
 });
 
 app.post("/compare", async (req, res) => {
   const { userInput, device1, device2 } = req.body;
   const model = genAI.getGenerativeModel({ model: "gemini-pro" });
 
-  const prompt = `Compare the two smart phones devices device1:${device1.name} device2:${device2.name} and user preference: ${userInput} and provide the whole response in plain text and no markdown`;
+  const prompt = `Compare the two smart phones devices device1:${device1.name} device2:${device2.name} and user preference: ${userInput} and provide the whole response in plain text and no markdown language and dont show the specification just give the ultimate answer`;
 
   const result = await model.generateContent(prompt);
   const response = await result.response;
