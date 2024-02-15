@@ -132,11 +132,11 @@ app.post("/devicedetails", async (req, res) => {
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
-  // mongoose
-  //   .connect(`mongodb://0.0.0.0:27017/Spec-Sync`, { useNewUrlParser: true })
-  //   .then(() => {
-  //     console.log("Database connected");
-  //   });
+  mongoose
+    .connect(`mongodb://0.0.0.0:27017/Spec-Sync`, { useNewUrlParser: true })
+    .then(() => {
+      console.log("Database connected");
+    });
 });
 
 app.post("/compare", async (req, res) => {
