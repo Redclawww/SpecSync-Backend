@@ -133,7 +133,7 @@ app.post("/devicedetails", async (req, res) => {
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
   mongoose
-    .connect(`mongodb://0.0.0.0:27017/Spec-Sync`, { useNewUrlParser: true })
+    .connect(`mongodb+srv://red:red@specsync.u5sdpun.mongodb.net/?retryWrites=true&w=majority`, { useNewUrlParser: true })
     .then(() => {
       console.log("Database connected");
     });
