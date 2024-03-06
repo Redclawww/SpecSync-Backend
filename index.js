@@ -7,9 +7,8 @@ const port = process.env.PORT || 3001;
 const cors = require("cors");
 const gsmarena = require("gsmarena-api"); // API
 const bodyParser = require("body-parser");
-import bodyParser from "body-parser";
-import { User } from "./models/User";
-import { Webhook } from "svix";
+const  User =require("./models/User");
+const Webhook = require("svix");
 
 app.use(bodyParser.json());
 app.use(express.json());
