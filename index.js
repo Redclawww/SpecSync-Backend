@@ -9,6 +9,7 @@ const gsmarena = require("gsmarena-api"); // API
 const bodyParser = require("body-parser");
 import bodyParser from "body-parser";
 import { User } from "./models/User";
+import { Webhook } from "svix";
 
 app.use(bodyParser.json());
 app.use(express.json());
@@ -78,8 +79,6 @@ app.get("/data/:email", async (req, res) => {
 app.post("/save", async (req, res) => {
   try {
     const { email, device1, device2, userInput, finalVerdict } = req.body;
-
-    // Create a new comparison history object
     const comparison = new ComparisonHistory({
       email,
       device1,
@@ -88,7 +87,6 @@ app.post("/save", async (req, res) => {
       finalVerdict,
     });
 
-    // Save the comparison history to the database
     await comparison.save();
 
     res.status(201).json({ message: "Comparison saved successfully" });
@@ -145,8 +143,28 @@ app.post("/compare", async (req, res) => {
   res.json(text);
 });
 
-app.post('/api/webhook', (req, res) => {
-  
-  console.log(req.body); 
-  res.sendStatus(200);
+app.post('/api/webhook',bodyParser.raw({type:"application/json"}),async (req, res) => {
+  try {
+    const payloadString = req.body.toString();
+    const svixHeaders = req.headers;
+    const wh = new Webhook(process.env.WEBHOOK_SECRET);
+    const evt = wh.verify(payloadString,svixHeaders);
+    const {id, ...attributes} = evt.data;
+    const evenType = evt.type;
+    if(evenType === "user.created"){
+      console.log(`user ${id} is ${evenType}`);
+      console.log(attributes);
+    }
+
+    res.send(200).json({
+      success: true,
+      message: "Webhook received"
+    })
+
+  } catch (error) {
+    res.send(400).json({
+      success: false,
+      message: "Webhook not received"
+    })
+  }
 });
