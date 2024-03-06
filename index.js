@@ -37,7 +37,6 @@ const comparisonSchema = new mongoose.Schema({
 });
 
 const Brands = mongoose.model("Brands", BrandList);
-const User = mongoose.model("User", userSchema);
 const ComparisonHistory = mongoose.model("ComparisonHistory", comparisonSchema);
 
 app.post("/auth", async (req, res) => {
