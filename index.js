@@ -5,8 +5,10 @@ const jwt = require("jsonwebtoken");
 const mongoose = require("mongoose");
 const port = process.env.PORT || 3001;
 const cors = require("cors");
-const gsmarena = require("gsmarena-api");
+const gsmarena = require("gsmarena-api"); // API
 const bodyParser = require("body-parser");
+import bodyParser from "body-parser";
+import { User } from "./models/User";
 
 app.use(bodyParser.json());
 app.use(express.json());
@@ -22,12 +24,7 @@ const BrandList = new mongoose.Schema({
   devices: Number,
 });
 
-const userSchema = new mongoose.Schema({
-  uid: String,
-  email: String,
-  name: String,
-  // Add more fields as needed
-});
+
 
 const comparisonSchema = new mongoose.Schema({
   userId: { type: String, ref: "User" },
@@ -45,11 +42,8 @@ const ComparisonHistory = mongoose.model("ComparisonHistory", comparisonSchema);
 
 app.post("/auth", async (req, res) => {
   try {
-    // Get user data from the request body
     const { uid, email, name } = req.body;
-
-    // Check if user already exists in the database
-    let existingUser = await User.findOne({ uid });
+    let existingUser = await User.findOne({ clerkId });
 
     // If user doesn't exist, create a new user record
     if (!existingUser) {
@@ -57,7 +51,7 @@ app.post("/auth", async (req, res) => {
         uid,
         email,
         name,
-        // Add more fields as needed
+        
       });
       await existingUser.save();
     }
@@ -149,4 +143,10 @@ app.post("/compare", async (req, res) => {
   const response = await result.response;
   const text = response.text();
   res.json(text);
+});
+
+app.post('/api/webhook', (req, res) => {
+  
+  console.log(req.body); 
+  res.sendStatus(200);
 });
