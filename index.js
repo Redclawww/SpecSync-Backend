@@ -7,7 +7,6 @@ const port = process.env.PORT || 3001;
 const cors = require("cors");
 const gsmarena = require("gsmarena-api"); // API
 const bodyParser = require("body-parser");
-const  User =require("./models/User");
 const Webhook = require("svix");
 
 app.use(bodyParser.json());
@@ -57,11 +56,10 @@ const User = mongoose.model("User", userSchema);
 const comparisonSchema = new mongoose.Schema({
   userId: { type: String, ref: "User" },
   email: String,
-  device1: String, // Name of device 1
-  device2: String, // Name of device 2
-  userInput: String, // Specific specifications used for comparison
+  device1: String, 
+  device2: String, 
+  userInput: String, 
   finalVerdict: String,
-  // Add other fields as needed
 });
 
 const Brands = mongoose.model("Brands", BrandList);
