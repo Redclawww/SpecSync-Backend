@@ -13,7 +13,6 @@ app.use(bodyParser.json());
 app.use(express.json());
 app.use(cors());
 
-// Gemini Configs
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 const genAI = new GoogleGenerativeAI(`${process.env.AIKey}`);
 
@@ -146,9 +145,9 @@ app.post("/devicedetails", async (req, res) => {
   }
 });
 
-app.listen(port, () => {
+app.listen(port, async() => {
   console.log(`Example app listening on port ${port}`);
-  mongoose
+  await mongoose
     .connect(`mongodb+srv://red:red@specsync.u5sdpun.mongodb.net/?retryWrites=true&w=majority`, { useNewUrlParser: true })
     .then(() => {
       console.log("Database connected");
