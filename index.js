@@ -98,6 +98,9 @@ app.post("/auth", async (req, res) => {
 
 app.get("/data/:email", async (req, res) => {
   try {
+    res.setHeader("Access-Control-Allow-Origin", "*"); // Replace with your allowed origins
+    res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+    res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
     const email = req.params.email;
     const data = await ComparisonHistory.find({ email });
     res.json(data);
