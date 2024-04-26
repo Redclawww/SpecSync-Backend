@@ -68,7 +68,6 @@ const comparisonSchema = new mongoose.Schema({
   finalVerdict: String,
 });
 
-const Brands = mongoose.model("Brands", BrandList);
 const ComparisonHistory = mongoose.model("ComparisonHistory", comparisonSchema);
 
 app.post("/auth", async (req, res) => {
@@ -96,35 +95,7 @@ app.post("/auth", async (req, res) => {
   }
 });
 
-app.post("/data", async (req, res) => {
-  try {
-    const email = req.body.email;
-    const data = await ComparisonHistory.find({ email });
-    res.json(data);
-  } catch (err) {
-    res.status(500).json({ message: err.message });
-  }
-});
 
-app.post("/save", async (req, res) => {
-  try {
-    const { email, device1, device2, userInput, finalVerdict } = req.body;
-    const comparison = new ComparisonHistory({
-      email,
-      device1,
-      device2,
-      userInput,
-      finalVerdict,
-    });
-
-    await comparison.save();
-
-    res.status(201).json({ message: "Comparison saved successfully" });
-  } catch (error) {
-    console.error("Error saving comparison:", error);
-    res.status(500).json({ message: "Error saving comparison" });
-  }
-});
 
 app.get("/brandlist", async (req, res) => {
   try {
@@ -202,3 +173,35 @@ app.post('/api/webhook',bodyParser.raw({type:"application/json"}),async (req, re
     })
   }
 });
+
+app.post("/save", async (req, res) => {
+  try {
+    const { email, device1, device2, userInput, finalVerdict } = req.body;
+    const comparison = new ComparisonHistory({
+      email,
+      device1,
+      device2,
+      userInput,
+      finalVerdict,
+    });
+
+    await comparison.save();
+
+    res.status(201).json({ message: "Comparison saved successfully" });
+  } catch (error) {
+    console.error("Error saving comparison:", error);
+    res.status(500).json({ message: "Error saving comparison" });
+  }
+});
+
+
+app.post("/data", async (req, res) => {
+  try {
+    const email = req.body.email;
+    const data = await ComparisonHistory.find({ email });
+    res.json(data);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+});
+
