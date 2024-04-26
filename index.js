@@ -99,7 +99,6 @@ app.post("/auth", async (req, res) => {
 app.post("/data", async (req, res) => {
   try {
     const email = req.body.email;
-    console.log(email);
     const data = await ComparisonHistory.find({ email });
     res.json(data);
   } catch (err) {
