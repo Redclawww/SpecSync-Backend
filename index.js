@@ -8,10 +8,17 @@ const cors = require("cors");
 const gsmarena = require("gsmarena-api"); // API
 const bodyParser = require("body-parser");
 const Webhook = require("svix");
+;
+
+const corsOptions = {
+  origin: ['https://spec-sync.vercel.app', 'http://localhost:5173'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization','Access-Control-Allow-Origin'],
+};
 
 app.use(bodyParser.json());
 app.use(express.json());
-app.use(cors());
+app.use(cors(corsOptions));
 
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 const genAI = new GoogleGenerativeAI(`${process.env.AIKey}`);
@@ -56,7 +63,7 @@ const comparisonSchema = new mongoose.Schema({
   userId: { type: String, ref: "User" },
   email: String,
   device1: String, 
-  device2: String, 
+  device2: String,  
   userInput: String, 
   finalVerdict: String,
 });
@@ -120,8 +127,12 @@ app.post("/save", async (req, res) => {
 });
 
 app.get("/brandlist", async (req, res) => {
-  const brands = await gsmarena.catalog.getBrands();
+  try {
+    const brands = await gsmarena.catalog.getBrands();
   res.json(brands);
+  } catch (error) {
+    console.log(error);
+  }
 });
 
 app.post("/getdevicelist", async (req, res) => {
