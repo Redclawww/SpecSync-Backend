@@ -127,15 +127,6 @@ app.post("/devicedetails", async (req, res) => {
   }
 });
 
-app.listen(port, async() => {
-  console.log(`Example app listening on port ${port}`);
-  await mongoose
-    .connect(process.env.MONGO_URI, { useNewUrlParser: true })
-    .then(() => {
-      console.log("Database connected");
-    });
-});
-
 app.post("/compare", async (req, res) => {
   const { userInput, device1, device2 } = req.body;
   const model = genAI.getGenerativeModel({ model: "gemini-pro" });
@@ -203,5 +194,16 @@ app.post("/data", async (req, res) => {
   } catch (err) {
     res.status(500).json({ message: err.message });
   }
+});
+
+
+
+app.listen(port, async() => {
+  console.log(`Example app listening on port ${port}`);
+  await mongoose
+    .connect(process.env.MONGO_URI, { useNewUrlParser: true })
+    .then(() => {
+      console.log("Database connected");
+    });
 });
 
