@@ -11,14 +11,16 @@ const Webhook = require("svix");
 ;
 
 const corsOptions = {
-  origin: ['https://spec-sync.vercel.app', 'http://localhost:5173'],
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization','Access-Control-Allow-Origin'],
+  
 };
 
 app.use(bodyParser.json());
 app.use(express.json());
-app.use(cors(corsOptions));
+app.use(cors({
+  origin: ['https://spec-sync.vercel.app', 'http://localhost:5173'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization','Access-Control-Allow-Origin'],
+}));
 
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 const genAI = new GoogleGenerativeAI(`${process.env.AIKey}`);
