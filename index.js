@@ -1,14 +1,23 @@
-require("dotenv").config();
-const express = require("express");
+import dotenv from "dotenv";
+dotenv.config();
+
+import express from "express";
 const app = express();
-const jwt = require("jsonwebtoken");
-const mongoose = require("mongoose");
+
+import jwt from "jsonwebtoken";
+import mongoose from "mongoose";
+
 const port = process.env.PORT || 3001;
-const cors = require("cors");
-const gsmarena = require("gsmarena-api"); // API
-const bodyParser = require("body-parser");
-const Webhook = require("svix");
-;
+
+import cors from "cors";
+app.use(cors());
+import bodyParser from "body-parser";
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
+import Webhook from "svix";
+
+import {  getBrands, getBrand, getDevice } from "./services/catalog.js";
 
 const corsOptions = {
   
@@ -22,7 +31,7 @@ app.use(cors({
   allowedHeaders: ['Content-Type', 'Authorization','Access-Control-Allow-Origin'],
 }));
 
-const { GoogleGenerativeAI } = require("@google/generative-ai");
+import  { GoogleGenerativeAI } from "@google/generative-ai";
 const genAI = new GoogleGenerativeAI(`${process.env.AIKey}`);
 
 const BrandList = new mongoose.Schema({
@@ -101,7 +110,7 @@ app.post("/auth", async (req, res) => {
 
 app.get("/brandlist", async (req, res) => {
   try {
-    const brands = await gsmarena.catalog.getBrands();
+    const brands = await getBrands();
   res.json(brands);
   } catch (error) {
     console.log(error);
@@ -110,8 +119,8 @@ app.get("/brandlist", async (req, res) => {
 
 app.post("/getdevicelist", async (req, res) => {
   try {
-    const getBrand = req.body.brandId;
-    const device = await gsmarena.catalog.getBrand(getBrand);
+    const Brand = req.body.brandId;
+    const device = await getBrand(Brand);
     res.json(device);
   } catch (error) {
     console.log("gsmserror:",error);
@@ -122,7 +131,7 @@ app.post("/getdevicelist", async (req, res) => {
 app.post("/devicedetails", async (req, res) => {
   try {
     const deviceId = req.body.deviceId;
-    const device = await gsmarena.catalog.getDevice(deviceId);
+    const device = await getDevice(deviceId);
     res.json(device);
   } catch (error) {
     res.json(error);
